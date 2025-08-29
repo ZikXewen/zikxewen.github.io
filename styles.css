@@ -52,12 +52,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  min-width: 600px;
 }
 
 .desktop > div {
   position: absolute;
-  width: 400px;
-  height: 400px;
 }
 
 .window-bar {
@@ -93,11 +92,30 @@ body {
 }
 
 #window-portrait {
-  top: 100px;
+  top: 50px;
   left: 200px;
 }
 
 #window-about {
-  top: 200px;
-  left: 700px;
+  top: 400px;
+  left: 150px;
+  width: 420px;
+}
+
+#window-about > .window-content {
+  padding: 0 20px;
+  overflow: auto; /* prevent margin collapsing */
+}
+
+@media (min-width: 992px) { /* large device layout */
+  #window-portrait {
+    top: 100px;
+    left: 200px;
+  }
+
+  #window-about {
+    top: 200px;
+    left: 500px;
+    width: 450px;
+  }
 }
